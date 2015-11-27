@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4AEA4F51BF09FA400899FEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */; };
+		A4AEA4F71BF09FA400899FEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA4F61BF09FA400899FEF /* ViewController.swift */; };
+		A4AEA4FA1BF09FA400899FEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA4F81BF09FA400899FEF /* Main.storyboard */; };
+		A4AEA4FC1BF09FA400899FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA4FB1BF09FA400899FEF /* Assets.xcassets */; };
+		A4AEA4FF1BF09FA400899FEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA4FD1BF09FA400899FEF /* LaunchScreen.storyboard */; };
+		A4AEA50A1BF09FA400899FEF /* teknappiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA5091BF09FA400899FEF /* teknappiTests.swift */; };
+		A4AEA5151BF09FA400899FEF /* teknappiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA5141BF09FA400899FEF /* teknappiUITests.swift */; };
+		A4AEA5231BF0A3D700899FEF /* teklogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA5221BF0A3D700899FEF /* teklogo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4AEA5061BF09FA400899FEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4AEA4E91BF09FA400899FEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4AEA4F01BF09FA400899FEF;
+			remoteInfo = teknappi;
+		};
+		A4AEA5111BF09FA400899FEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4AEA4E91BF09FA400899FEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4AEA4F01BF09FA400899FEF;
+			remoteInfo = teknappi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A4AEA4F11BF09FA400899FEF /* teknappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teknappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A4AEA4F61BF09FA400899FEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4AEA4F91BF09FA400899FEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A4AEA4FB1BF09FA400899FEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4AEA4FE1BF09FA400899FEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4AEA5001BF09FA400899FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4AEA5051BF09FA400899FEF /* teknappiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teknappiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4AEA5091BF09FA400899FEF /* teknappiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teknappiTests.swift; sourceTree = "<group>"; };
+		A4AEA50B1BF09FA400899FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4AEA5101BF09FA400899FEF /* teknappiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teknappiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4AEA5141BF09FA400899FEF /* teknappiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teknappiUITests.swift; sourceTree = "<group>"; };
+		A4AEA5161BF09FA400899FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4AEA5221BF0A3D700899FEF /* teklogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teklogo.png; path = ../../../../../Users/jvesala/Downloads/teklogo.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4AEA4EE1BF09FA400899FEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4AEA5021BF09FA400899FEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4AEA50D1BF09FA400899FEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4AEA4E81BF09FA400899FEF = {
+			isa = PBXGroup;
+			children = (
+				A4AEA4F31BF09FA400899FEF /* teknappi */,
+				A4AEA5081BF09FA400899FEF /* teknappiTests */,
+				A4AEA5131BF09FA400899FEF /* teknappiUITests */,
+				A4AEA4F21BF09FA400899FEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4AEA4F21BF09FA400899FEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4AEA4F11BF09FA400899FEF /* teknappi.app */,
+				A4AEA5051BF09FA400899FEF /* teknappiTests.xctest */,
+				A4AEA5101BF09FA400899FEF /* teknappiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4AEA4F31BF09FA400899FEF /* teknappi */ = {
+			isa = PBXGroup;
+			children = (
+				A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */,
+				A4AEA4F61BF09FA400899FEF /* ViewController.swift */,
+				A4AEA4F81BF09FA400899FEF /* Main.storyboard */,
+				A4AEA4FB1BF09FA400899FEF /* Assets.xcassets */,
+				A4AEA5221BF0A3D700899FEF /* teklogo.png */,
+				A4AEA4FD1BF09FA400899FEF /* LaunchScreen.storyboard */,
+				A4AEA5001BF09FA400899FEF /* Info.plist */,
+			);
+			path = teknappi;
+			sourceTree = "<group>";
+		};
+		A4AEA5081BF09FA400899FEF /* teknappiTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4AEA5091BF09FA400899FEF /* teknappiTests.swift */,
+				A4AEA50B1BF09FA400899FEF /* Info.plist */,
+			);
+			path = teknappiTests;
+			sourceTree = "<group>";
+		};
+		A4AEA5131BF09FA400899FEF /* teknappiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4AEA5141BF09FA400899FEF /* teknappiUITests.swift */,
+				A4AEA5161BF09FA400899FEF /* Info.plist */,
+			);
+			path = teknappiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4AEA4F01BF09FA400899FEF /* teknappi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4AEA5191BF09FA400899FEF /* Build configuration list for PBXNativeTarget "teknappi" */;
+			buildPhases = (
+				A4AEA4ED1BF09FA400899FEF /* Sources */,
+				A4AEA4EE1BF09FA400899FEF /* Frameworks */,
+				A4AEA4EF1BF09FA400899FEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = teknappi;
+			productName = teknappi;
+			productReference = A4AEA4F11BF09FA400899FEF /* teknappi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4AEA5041BF09FA400899FEF /* teknappiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4AEA51C1BF09FA400899FEF /* Build configuration list for PBXNativeTarget "teknappiTests" */;
+			buildPhases = (
+				A4AEA5011BF09FA400899FEF /* Sources */,
+				A4AEA5021BF09FA400899FEF /* Frameworks */,
+				A4AEA5031BF09FA400899FEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4AEA5071BF09FA400899FEF /* PBXTargetDependency */,
+			);
+			name = teknappiTests;
+			productName = teknappiTests;
+			productReference = A4AEA5051BF09FA400899FEF /* teknappiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4AEA50F1BF09FA400899FEF /* teknappiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4AEA51F1BF09FA400899FEF /* Build configuration list for PBXNativeTarget "teknappiUITests" */;
+			buildPhases = (
+				A4AEA50C1BF09FA400899FEF /* Sources */,
+				A4AEA50D1BF09FA400899FEF /* Frameworks */,
+				A4AEA50E1BF09FA400899FEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4AEA5121BF09FA400899FEF /* PBXTargetDependency */,
+			);
+			name = teknappiUITests;
+			productName = teknappiUITests;
+			productReference = A4AEA5101BF09FA400899FEF /* teknappiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4AEA4E91BF09FA400899FEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Jussi Vesala";
+				TargetAttributes = {
+					A4AEA4F01BF09FA400899FEF = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Z6EKH6JPBA;
+					};
+					A4AEA5041BF09FA400899FEF = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Z6EKH6JPBA;
+						TestTargetID = A4AEA4F01BF09FA400899FEF;
+					};
+					A4AEA50F1BF09FA400899FEF = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Z6EKH6JPBA;
+						TestTargetID = A4AEA4F01BF09FA400899FEF;
+					};
+				};
+			};
+			buildConfigurationList = A4AEA4EC1BF09FA400899FEF /* Build configuration list for PBXProject "teknappi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4AEA4E81BF09FA400899FEF;
+			productRefGroup = A4AEA4F21BF09FA400899FEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4AEA4F01BF09FA400899FEF /* teknappi */,
+				A4AEA5041BF09FA400899FEF /* teknappiTests */,
+				A4AEA50F1BF09FA400899FEF /* teknappiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4AEA4EF1BF09FA400899FEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4AEA4FF1BF09FA400899FEF /* LaunchScreen.storyboard in Resources */,
+				A4AEA4FC1BF09FA400899FEF /* Assets.xcassets in Resources */,
+				A4AEA4FA1BF09FA400899FEF /* Main.storyboard in Resources */,
+				A4AEA5231BF0A3D700899FEF /* teklogo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4AEA5031BF09FA400899FEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4AEA50E1BF09FA400899FEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4AEA4ED1BF09FA400899FEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4AEA4F71BF09FA400899FEF /* ViewController.swift in Sources */,
+				A4AEA4F51BF09FA400899FEF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4AEA5011BF09FA400899FEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4AEA50A1BF09FA400899FEF /* teknappiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4AEA50C1BF09FA400899FEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4AEA5151BF09FA400899FEF /* teknappiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4AEA5071BF09FA400899FEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4AEA4F01BF09FA400899FEF /* teknappi */;
+			targetProxy = A4AEA5061BF09FA400899FEF /* PBXContainerItemProxy */;
+		};
+		A4AEA5121BF09FA400899FEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4AEA4F01BF09FA400899FEF /* teknappi */;
+			targetProxy = A4AEA5111BF09FA400899FEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A4AEA4F81BF09FA400899FEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4AEA4F91BF09FA400899FEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A4AEA4FD1BF09FA400899FEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4AEA4FE1BF09FA400899FEF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4AEA5171BF09FA400899FEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4AEA5181BF09FA400899FEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4AEA51A1BF09FA400899FEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = teknappi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jvesala.teknappi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A4AEA51B1BF09FA400899FEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = teknappi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jvesala.teknappi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A4AEA51D1BF09FA400899FEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = teknappiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jvesala.teknappiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/teknappi.app/teknappi";
+			};
+			name = Debug;
+		};
+		A4AEA51E1BF09FA400899FEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = teknappiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jvesala.teknappiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/teknappi.app/teknappi";
+			};
+			name = Release;
+		};
+		A4AEA5201BF09FA400899FEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = teknappiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jvesala.teknappiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = teknappi;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A4AEA5211BF09FA400899FEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = teknappiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jvesala.teknappiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = teknappi;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4AEA4EC1BF09FA400899FEF /* Build configuration list for PBXProject "teknappi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4AEA5171BF09FA400899FEF /* Debug */,
+				A4AEA5181BF09FA400899FEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4AEA5191BF09FA400899FEF /* Build configuration list for PBXNativeTarget "teknappi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4AEA51A1BF09FA400899FEF /* Debug */,
+				A4AEA51B1BF09FA400899FEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A4AEA51C1BF09FA400899FEF /* Build configuration list for PBXNativeTarget "teknappiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4AEA51D1BF09FA400899FEF /* Debug */,
+				A4AEA51E1BF09FA400899FEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A4AEA51F1BF09FA400899FEF /* Build configuration list for PBXNativeTarget "teknappiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4AEA5201BF09FA400899FEF /* Debug */,
+				A4AEA5211BF09FA400899FEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4AEA4E91BF09FA400899FEF /* Project object */;
+}
