@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FA525F699E36BE7AEB0E087 /* Pods_teknappi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F87E9B6A22D6BEB5668590C /* Pods_teknappi.framework */; };
 		A4AEA4F51BF09FA400899FEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */; };
 		A4AEA4F71BF09FA400899FEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA4F61BF09FA400899FEF /* ViewController.swift */; };
 		A4AEA4FA1BF09FA400899FEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA4F81BF09FA400899FEF /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F87E9B6A22D6BEB5668590C /* Pods_teknappi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teknappi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AEA4F11BF09FA400899FEF /* teknappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teknappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4AEA4F61BF09FA400899FEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		A4AEA5101BF09FA400899FEF /* teknappiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teknappiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AEA5141BF09FA400899FEF /* teknappiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teknappiUITests.swift; sourceTree = "<group>"; };
 		A4AEA5161BF09FA400899FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F41DE96CC69C0AC35E6C871C /* Pods-teknappi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teknappi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teknappi/Pods-teknappi.debug.xcconfig"; sourceTree = "<group>"; };
+		F430C6D2B83CDC21684F8C0A /* Pods-teknappi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teknappi.release.xcconfig"; path = "Pods/Target Support Files/Pods-teknappi/Pods-teknappi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA525F699E36BE7AEB0E087 /* Pods_teknappi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30BB1C3D8C6A3AA7B90052B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F41DE96CC69C0AC35E6C871C /* Pods-teknappi.debug.xcconfig */,
+				F430C6D2B83CDC21684F8C0A /* Pods-teknappi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		99E45E49E3D8EA6B061AB6EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F87E9B6A22D6BEB5668590C /* Pods_teknappi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A4AEA4E81BF09FA400899FEF = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				A4AEA5081BF09FA400899FEF /* teknappiTests */,
 				A4AEA5131BF09FA400899FEF /* teknappiUITests */,
 				A4AEA4F21BF09FA400899FEF /* Products */,
+				30BB1C3D8C6A3AA7B90052B1 /* Pods */,
+				99E45E49E3D8EA6B061AB6EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4AEA5191BF09FA400899FEF /* Build configuration list for PBXNativeTarget "teknappi" */;
 			buildPhases = (
+				93AD0290047991883BF808CC /* Check Pods Manifest.lock */,
 				A4AEA4ED1BF09FA400899FEF /* Sources */,
 				A4AEA4EE1BF09FA400899FEF /* Frameworks */,
 				A4AEA4EF1BF09FA400899FEF /* Resources */,
+				F7A2DF92B516021EAF33DE50 /* Embed Pods Frameworks */,
+				8DB5C0309F243FC4EFCAC6AE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8DB5C0309F243FC4EFCAC6AE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teknappi/Pods-teknappi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93AD0290047991883BF808CC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7A2DF92B516021EAF33DE50 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teknappi/Pods-teknappi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4AEA4ED1BF09FA400899FEF /* Sources */ = {
@@ -400,6 +475,7 @@
 		};
 		A4AEA51A1BF09FA400899FEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F41DE96CC69C0AC35E6C871C /* Pods-teknappi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = teknappi/Info.plist;
@@ -411,6 +487,7 @@
 		};
 		A4AEA51B1BF09FA400899FEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F430C6D2B83CDC21684F8C0A /* Pods-teknappi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = teknappi/Info.plist;

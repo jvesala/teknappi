@@ -1,0 +1,20 @@
+PODS:
+  - Argo (2.2.0)
+  - RxCocoa (2.0.0-alpha.3):
+    - RxSwift (~> 2.0.0-alpha)
+  - RxSwift (2.0.0-alpha.3)
+  - SnapKit (0.18.0)
+
+DEPENDENCIES:
+  - Argo
+  - RxCocoa (= 2.0.0-alpha.3)
+  - RxSwift (= 2.0.0-alpha.3)
+  - SnapKit
+
+SPEC CHECKSUMS:
+  Argo: 4f52a32b4cd913c204e5a45f420b3fccad3e3f24
+  RxCocoa: 2a45f35cd0eb6a01e081b3d11849c2fcb0bdb6de
+  RxSwift: c66f7956b2e5fb397a62bf4a3ec6072749a816a7
+  SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
+
+COCOAPODS: 0.39.0
