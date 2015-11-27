@@ -23,8 +23,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="teklogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2sK-8E-ha5">
-                                <rect key="frame" x="115" y="57" width="159" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="164" placeholderIntrinsicHeight="65" image="teklogo" translatesAutoresizingMaskIntoConstraints="NO" id="cbe-nN-i2C">
+                                <rect key="frame" x="115" y="50" width="164" height="65"/>
                             </imageView>
                         </subviews>
                         <animations/>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="teklogo.png" width="159" height="60"/>
+        <image name="teklogo" width="159" height="60"/>
     </resources>
 </document>

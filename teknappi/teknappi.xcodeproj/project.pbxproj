@@ -14,7 +14,6 @@
 		A4AEA4FF1BF09FA400899FEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA4FD1BF09FA400899FEF /* LaunchScreen.storyboard */; };
 		A4AEA50A1BF09FA400899FEF /* teknappiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA5091BF09FA400899FEF /* teknappiTests.swift */; };
 		A4AEA5151BF09FA400899FEF /* teknappiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA5141BF09FA400899FEF /* teknappiUITests.swift */; };
-		A4AEA5231BF0A3D700899FEF /* teklogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA5221BF0A3D700899FEF /* teklogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		A4AEA5101BF09FA400899FEF /* teknappiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teknappiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AEA5141BF09FA400899FEF /* teknappiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teknappiUITests.swift; sourceTree = "<group>"; };
 		A4AEA5161BF09FA400899FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4AEA5221BF0A3D700899FEF /* teklogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teklogo.png; path = ../../../../../Users/jvesala/Downloads/teklogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +101,6 @@
 				A4AEA4F61BF09FA400899FEF /* ViewController.swift */,
 				A4AEA4F81BF09FA400899FEF /* Main.storyboard */,
 				A4AEA4FB1BF09FA400899FEF /* Assets.xcassets */,
-				A4AEA5221BF0A3D700899FEF /* teklogo.png */,
 				A4AEA4FD1BF09FA400899FEF /* LaunchScreen.storyboard */,
 				A4AEA5001BF09FA400899FEF /* Info.plist */,
 			);
@@ -238,7 +235,6 @@
 				A4AEA4FF1BF09FA400899FEF /* LaunchScreen.storyboard in Resources */,
 				A4AEA4FC1BF09FA400899FEF /* Assets.xcassets in Resources */,
 				A4AEA4FA1BF09FA400899FEF /* Main.storyboard in Resources */,
-				A4AEA5231BF0A3D700899FEF /* teklogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +487,7 @@
 				A4AEA51B1BF09FA400899FEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4AEA51C1BF09FA400899FEF /* Build configuration list for PBXNativeTarget "teknappiTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +496,7 @@
 				A4AEA51E1BF09FA400899FEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4AEA51F1BF09FA400899FEF /* Build configuration list for PBXNativeTarget "teknappiUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +505,7 @@
 				A4AEA5211BF09FA400899FEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

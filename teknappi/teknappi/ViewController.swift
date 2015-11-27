@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: Properties
     @IBOutlet weak var phoneTextField: UILabel!
@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        phoneNumberField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,8 +24,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: Actions
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
+    func textFieldDidEndEditing(textField: UITextField) {
+        phoneTextField.text = textField.text
+    }
+    
+    // MARK: Actions
     @IBAction func sendContactRequest(sender: UIButton) {
         phoneTextField.text = phoneNumberField.text
     }
