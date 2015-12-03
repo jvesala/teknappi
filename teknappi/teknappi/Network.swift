@@ -29,13 +29,16 @@ extension ServerResult: Decodable {
 class Server {
     static func sendContactRequest(phoneNumber: String) -> Observable<ServerResult> {
         let url = NSURL(string: "https://teknappimock.herokuapp.com/tek/api/v1/requestContact")
-        return doPost(url!)
+        let params = ["phoneNumber": phoneNumber] as Dictionary<String, String>
+        let data = try! NSJSONSerialization.dataWithJSONObject(params, options: [])
+        return doPost(url!, data: data)
     }
 
-    static func doPost(url: NSURL) -> Observable<ServerResult> {
+    static func doPost(url: NSURL, data: NSData) -> Observable<ServerResult> {
         let request = NSMutableURLRequest(URL: url, cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10)
-        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        request.HTTPBody = data
         request.HTTPMethod = "POST"
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         return session.rx_JSON(request)
             .map { (data: AnyObject!) -> ServerResult in
                 let postResult: ServerResult? = decode(data)
