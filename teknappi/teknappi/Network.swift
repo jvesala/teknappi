@@ -38,6 +38,8 @@ class Server {
         let request = NSMutableURLRequest(URL: url, cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10)
         request.HTTPBody = data
         request.HTTPMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         return session.rx_JSON(request)
             .map { (data: AnyObject!) -> ServerResult in
