@@ -31,12 +31,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        phoneTextField.text = textField.text
+        print(textField.text)
     }
     
     // MARK: Actions
     @IBAction func sendContactRequest(sender: UIButton) {
-        phoneTextField.text = phoneNumberField.text
+        print(phoneNumberField.text)
+        let response = Server.sendContactRequest(phoneNumberField.text ?? "000")
+        response.subscribeNext { results in
+            print(results)
+        }
     }
 }
 

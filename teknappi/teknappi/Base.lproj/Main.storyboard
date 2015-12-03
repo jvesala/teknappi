@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PcL-LF-N3Z">
-                                <rect key="frame" x="0.0" y="48" width="374" height="251"/>
+                                <rect key="frame" x="0.0" y="48" width="333" height="111"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="Yhteydenottopyyntö" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfr-ib-8x9">
                                         <rect key="frame" x="0.0" y="0.0" width="156" height="21"/>
@@ -42,7 +42,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIc-ED-yrg">
-                                        <rect key="frame" x="0.0" y="51" width="374" height="200"/>
+                                        <rect key="frame" x="0.0" y="51" width="333" height="60"/>
                                         <state key="normal" title="Send contact request" image="red-button"/>
                                         <connections>
                                             <action selector="sendContactRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="12s-tL-EuP"/>
