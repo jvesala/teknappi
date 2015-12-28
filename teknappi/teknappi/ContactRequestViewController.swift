@@ -13,21 +13,30 @@ import RxCocoa
 import RxSwift
 
 class ContactRequestViewController: UIViewController {
+    let image = UIImageView(image: UIImage(named: "teklogo-valkoinen"))
     let label = UILabel()
     let phoneNumberInput = UITextField()
     let button = UIButton()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
-        view.backgroundColor = UIColor(red: 0.788, green: 0.788, blue: 0.788, alpha: 1.0)
+        view.backgroundColor = UIColor.whiteColor()
         
+        view.addSubview(image)
         view.addSubview(label)
         view.addSubview(phoneNumberInput)
         view.addSubview(button)
 
+        image.snp_makeConstraints{ make in
+            make.top.equalTo(topLayoutGuide).offset(20)
+            make.centerX.equalTo(self.view.centerXAnchor)
+            make.width.equalTo(200)
+            make.height.equalTo(60)
+        }
+        
         label.text = "Yhteydenottopyyntö"
         label.snp_makeConstraints{ make in
-            make.top.equalTo(topLayoutGuide).offset(20)
+            make.top.equalTo(image.snp_bottom).offset(20)
             make.centerX.equalTo(self.view.centerXAnchor)
             make.height.equalTo(40)
         }
