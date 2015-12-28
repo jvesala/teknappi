@@ -54,6 +54,8 @@ class ContactRequestViewController: UIViewController {
         }
 
         submitButton.setImage(UIImage(named: "red-button"), forState: .Normal)
+        submitButton.setImage(UIImage(named: "red-button-disabled"), forState: .Disabled)
+        submitButton.enabled = false
         submitButton.snp_makeConstraints { make in
             make.top.equalTo(phoneNumberInput.snp_bottom)
             make.centerX.equalTo(self.view.centerXAnchor)
@@ -68,9 +70,18 @@ class ContactRequestViewController: UIViewController {
             make.centerX.equalTo(self.view.centerXAnchor)
             make.height.equalTo(40)
         }
-
+        
+        phoneNumberInput.rx_text.subscribeNext { value in
+            if (value.isEmpty) {
+                self.submitButton.enabled = false
+            }  else {
+                self.submitButton.enabled = true
+            }
+        }.addDisposableTo(disposeBag)
+        
         submitButton.rx_tap.subscribeNext { click in
             if let phoneNumber = self.phoneNumberInput.text {
+                self.submitButton.enabled = false                
                 self.phoneNumberInput.text? = ""
                 let response = Server.sendContactRequest(phoneNumber)
                 response.subscribeNext { results in
