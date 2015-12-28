@@ -11,8 +11,6 @@
 		A45FA3FF1C0B044F007C35BB /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45FA3FE1C0B044F007C35BB /* Network.swift */; };
 		A45FA4011C116D81007C35BB /* ContactRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45FA4001C116D81007C35BB /* ContactRequestViewController.swift */; };
 		A4AEA4F51BF09FA400899FEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */; };
-		A4AEA4F71BF09FA400899FEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA4F61BF09FA400899FEF /* ViewController.swift */; };
-		A4AEA4FA1BF09FA400899FEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA4F81BF09FA400899FEF /* Main.storyboard */; };
 		A4AEA4FC1BF09FA400899FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA4FB1BF09FA400899FEF /* Assets.xcassets */; };
 		A4AEA4FF1BF09FA400899FEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA4FD1BF09FA400899FEF /* LaunchScreen.storyboard */; };
 		A4AEA50A1BF09FA400899FEF /* teknappiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA5091BF09FA400899FEF /* teknappiTests.swift */; };
@@ -42,8 +40,6 @@
 		A45FA4001C116D81007C35BB /* ContactRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRequestViewController.swift; sourceTree = "<group>"; };
 		A4AEA4F11BF09FA400899FEF /* teknappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teknappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4AEA4F61BF09FA400899FEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A4AEA4F91BF09FA400899FEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4AEA4FB1BF09FA400899FEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4AEA4FE1BF09FA400899FEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4AEA5001BF09FA400899FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,8 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */,
-				A4AEA4F61BF09FA400899FEF /* ViewController.swift */,
-				A4AEA4F81BF09FA400899FEF /* Main.storyboard */,
 				A4AEA4FB1BF09FA400899FEF /* Assets.xcassets */,
 				A4AEA4FD1BF09FA400899FEF /* LaunchScreen.storyboard */,
 				A4AEA5001BF09FA400899FEF /* Info.plist */,
@@ -267,7 +261,6 @@
 			files = (
 				A4AEA4FF1BF09FA400899FEF /* LaunchScreen.storyboard in Resources */,
 				A4AEA4FC1BF09FA400899FEF /* Assets.xcassets in Resources */,
-				A4AEA4FA1BF09FA400899FEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4AEA4F71BF09FA400899FEF /* ViewController.swift in Sources */,
 				A45FA4011C116D81007C35BB /* ContactRequestViewController.swift in Sources */,
 				A4AEA4F51BF09FA400899FEF /* AppDelegate.swift in Sources */,
 				A45FA3FF1C0B044F007C35BB /* Network.swift in Sources */,
@@ -379,14 +371,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A4AEA4F81BF09FA400899FEF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A4AEA4F91BF09FA400899FEF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A4AEA4FD1BF09FA400899FEF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
