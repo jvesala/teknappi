@@ -16,7 +16,7 @@ class ContactRequestViewController: UIViewController {
     let image = UIImageView(image: UIImage(named: "teklogo-valkoinen"))
     let label = UILabel()
     let phoneNumberInput = UITextField()
-    let button = UIButton()
+    let submitButton = UIButton()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class ContactRequestViewController: UIViewController {
         view.addSubview(image)
         view.addSubview(label)
         view.addSubview(phoneNumberInput)
-        view.addSubview(button)
+        view.addSubview(submitButton)
 
         image.snp_makeConstraints{ make in
             make.top.equalTo(topLayoutGuide).offset(20)
@@ -51,15 +51,15 @@ class ContactRequestViewController: UIViewController {
             make.height.equalTo(40)
         }
 
-        button.setImage(UIImage(named: "red-button"), forState: .Normal)
-        button.snp_makeConstraints { make in
+        submitButton.setImage(UIImage(named: "red-button"), forState: .Normal)
+        submitButton.snp_makeConstraints { make in
             make.top.equalTo(phoneNumberInput.snp_bottom)
             make.centerX.equalTo(self.view.centerXAnchor)
             make.width.equalTo(200)
             make.height.equalTo(200)
         }
         
-        button.rx_tap.subscribeNext { click in
+        submitButton.rx_tap.subscribeNext { click in
             if let phoneNumber = self.phoneNumberInput.text {
                 self.phoneNumberInput.text? = ""
                 let response = Server.sendContactRequest(phoneNumber)
