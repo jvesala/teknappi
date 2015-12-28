@@ -19,7 +19,7 @@ class ContactRequestViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor(red: 0.788, green: 0.788, blue: 0.788, alpha: 1.0)
         
         view.addSubview(label)
         view.addSubview(phoneNumberInput)
@@ -28,20 +28,21 @@ class ContactRequestViewController: UIViewController {
         label.text = "Yhteydenottopyyntö"
         label.snp_makeConstraints{ make in
             make.top.equalTo(topLayoutGuide).offset(20)
-            make.width.equalTo(300)
+            make.centerX.equalTo(self.view.centerXAnchor)
             make.height.equalTo(40)
         }
 
         phoneNumberInput.placeholder = "Anna puhelinnumerosi"
         phoneNumberInput.snp_makeConstraints{ make in
             make.top.equalTo(label.snp_bottom)
-            make.width.equalTo(300)
+            make.centerX.equalTo(self.view.centerXAnchor)
             make.height.equalTo(40)
         }
 
         button.setImage(UIImage(named: "red-button"), forState: .Normal)
         button.snp_makeConstraints { make in
             make.top.equalTo(phoneNumberInput.snp_bottom)
+            make.centerX.equalTo(self.view.centerXAnchor)
             make.width.equalTo(200)
             make.height.equalTo(200)
         }
