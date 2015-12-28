@@ -60,11 +60,12 @@ class ContactRequestViewController: UIViewController {
         }
         
         button.rx_tap.subscribeNext { click in
-            let phoneNumber = self.phoneNumberInput.text ?? "-"
-            self.phoneNumberInput.text? = ""
-            let response = Server.sendContactRequest(phoneNumber)
-            response.subscribeNext { results in
-                print(results)
+            if let phoneNumber = self.phoneNumberInput.text {
+                self.phoneNumberInput.text? = ""
+                let response = Server.sendContactRequest(phoneNumber)
+                response.subscribeNext { results in
+                    print(results)
+                }
             }
         }.addDisposableTo(disposeBag)
     }    
