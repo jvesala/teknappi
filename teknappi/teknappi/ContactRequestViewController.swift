@@ -17,6 +17,7 @@ class ContactRequestViewController: UIViewController {
     let label = UILabel()
     let phoneNumberInput = UITextField()
     let submitButton = UIButton()
+    let loginPageLink = UIButton()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class ContactRequestViewController: UIViewController {
         view.addSubview(label)
         view.addSubview(phoneNumberInput)
         view.addSubview(submitButton)
+        view.addSubview(loginPageLink)
 
         image.snp_makeConstraints{ make in
             make.top.equalTo(topLayoutGuide).offset(20)
@@ -59,6 +61,14 @@ class ContactRequestViewController: UIViewController {
             make.height.equalTo(200)
         }
         
+        loginPageLink.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        loginPageLink.setTitle("Siirry kirjautumissivulle", forState: UIControlState.Normal)
+        loginPageLink.snp_makeConstraints { make in
+            make.top.equalTo(submitButton.snp_bottom)
+            make.centerX.equalTo(self.view.centerXAnchor)
+            make.height.equalTo(40)
+        }
+
         submitButton.rx_tap.subscribeNext { click in
             if let phoneNumber = self.phoneNumberInput.text {
                 self.phoneNumberInput.text? = ""
@@ -68,5 +78,9 @@ class ContactRequestViewController: UIViewController {
                 }
             }
         }.addDisposableTo(disposeBag)
-    }    
+
+        loginPageLink.rx_tap.subscribeNext { click in
+            print("Login")
+        }.addDisposableTo(disposeBag)
+    }
 }
