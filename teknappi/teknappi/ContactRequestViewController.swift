@@ -34,11 +34,14 @@ class ContactRequestViewController: UIViewController {
             make.height.equalTo(60)
         }
         
-        label.text = "Yhteydenottopyyntö"
+        label.text = "Anna puhelinnumerosi ja paina nappia, niin otamme yhteyttä!"
+        label.numberOfLines = 0
+        label.lineBreakMode = .ByWordWrapping
         label.snp_makeConstraints{ make in
             make.top.equalTo(image.snp_bottom).offset(20)
             make.centerX.equalTo(self.view.centerXAnchor)
-            make.height.equalTo(40)
+            make.width.equalTo(250)
+            make.height.equalTo(60)
         }
 
         phoneNumberInput.placeholder = "Anna puhelinnumerosi"
