@@ -15,10 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if let window = window {
-            window.rootViewController = ContactRequestViewController()
+            let myVC1 = ContactRequestViewController()
+            myVC1.tabBarItem = UITabBarItem(title: "Yhteydenotto", image: UIImage(named: "phone"), tag: 1)
+
+            let tabBarController = UITabBarController()
+            let controllers = [myVC1]
+            tabBarController.viewControllers = controllers
+            window.rootViewController = tabBarController
             window.makeKeyAndVisible()
         }
         return true
