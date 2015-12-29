@@ -20,8 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let myVC1 = ContactRequestViewController()
             myVC1.tabBarItem = UITabBarItem(title: "Yhteydenotto", image: UIImage(named: "phone"), tag: 1)
 
+            let myVC2 = UserDataViewController()
+            myVC2.tabBarItem = UITabBarItem(title: "Omat tiedot", image: UIImage(named: "man"), tag: 2)
+
+            let controllers = [myVC1, myVC2]
+
             let tabBarController = UITabBarController()
-            let controllers = [myVC1]
             tabBarController.viewControllers = controllers
             window.rootViewController = tabBarController
             window.makeKeyAndVisible()
