@@ -12,7 +12,10 @@ import SnapKit
 import RxCocoa
 import RxSwift
 
-class ContactRequestViewController: UIViewController {
+class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
+    let scrollView = UIScrollView()
+    let containerView = UIView()
+
     let image = UIImageView(image: UIImage(named: "teklogo-valkoinen"))
     let label = UILabel()
     let phoneNumberInput = UITextField()
@@ -20,12 +23,20 @@ class ContactRequestViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        self.scrollView.delegate = self
+        self.scrollView.contentSize = CGSizeMake(view.bounds.width, 500)
+
+        containerView.backgroundColor = UIColor.greenColor()
+        scrollView.backgroundColor = UIColor.blueColor()
         view.backgroundColor = UIColor.whiteColor()
-        
-        view.addSubview(image)
-        view.addSubview(label)
-        view.addSubview(phoneNumberInput)
-        view.addSubview(submitButton)
+
+        view.addSubview(scrollView)
+        scrollView.addSubview(containerView)
+        containerView.addSubview(image)
+        containerView.addSubview(label)
+        containerView.addSubview(phoneNumberInput)
+        containerView.addSubview(submitButton)
 
         image.snp_makeConstraints{ make in
             make.top.equalTo(topLayoutGuide).offset(20)
@@ -79,5 +90,11 @@ class ContactRequestViewController: UIViewController {
                 }
             }
         }.addDisposableTo(disposeBag)
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.frame = view.bounds
+        containerView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height)
     }
 }
