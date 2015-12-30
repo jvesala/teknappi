@@ -39,6 +39,7 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.frame = view.bounds
+        scrollView.contentSize = CGSizeMake(view.bounds.width, 500)
         containerView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height)
     }
 
