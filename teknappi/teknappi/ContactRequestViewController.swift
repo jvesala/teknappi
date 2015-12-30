@@ -33,11 +33,21 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
 
         view.addSubview(scrollView)
         scrollView.addSubview(containerView)
+        makeContainerView()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.frame = view.bounds
+        containerView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height)
+    }
+
+    func makeContainerView() {
         containerView.addSubview(image)
         containerView.addSubview(label)
         containerView.addSubview(phoneNumberInput)
         containerView.addSubview(submitButton)
-
+        
         image.snp_makeConstraints{ make in
             make.top.equalTo(topLayoutGuide).offset(20)
             make.centerX.equalTo(self.view.centerXAnchor)
@@ -54,14 +64,14 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
             make.width.equalTo(250)
             make.height.equalTo(60)
         }
-
+        
         phoneNumberInput.placeholder = "Anna puhelinnumerosi"
         phoneNumberInput.snp_makeConstraints{ make in
             make.top.equalTo(label.snp_bottom)
             make.centerX.equalTo(self.view.centerXAnchor)
             make.height.equalTo(40)
         }
-
+        
         submitButton.setImage(UIImage(named: "red-button"), forState: .Normal)
         submitButton.setImage(UIImage(named: "red-button-disabled"), forState: .Disabled)
         submitButton.enabled = false
@@ -82,7 +92,7 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
         
         submitButton.rx_tap.subscribeNext { click in
             if let phoneNumber = self.phoneNumberInput.text {
-                self.submitButton.enabled = false                
+                self.submitButton.enabled = false
                 self.phoneNumberInput.text? = ""
                 let response = Server.sendContactRequest(phoneNumber)
                 response.subscribeNext { results in
@@ -90,11 +100,5 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
                 }
             }
         }.addDisposableTo(disposeBag)
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        scrollView.frame = view.bounds
-        containerView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height)
     }
 }
