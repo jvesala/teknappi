@@ -16,6 +16,7 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
     let tabBarHeight: CGFloat
     let scrollView = UIScrollView()
     let containerView = UIView()
+    let containerHeight = CGFloat(400)
 
     let image = UIImageView(image: UIImage(named: "teklogo-valkoinen"))
     let label = UILabel()
@@ -35,33 +36,30 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.scrollView.delegate = self
-        self.scrollView.contentSize = CGSizeMake(view.bounds.width, view.bounds.height - tabBarHeight)
+        self.scrollView.contentSize = CGSizeMake(view.bounds.width, containerHeight)
 
-        containerView.backgroundColor = UIColor.greenColor()
-        scrollView.backgroundColor = UIColor.blueColor()
         view.backgroundColor = UIColor.whiteColor()
-
         view.addSubview(scrollView)
         scrollView.addSubview(containerView)
-        makeContainerView()
+        makeContainerView(scrollView)
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.frame = CGRectMake(0, 0, view.bounds.width, view.bounds.height - tabBarHeight)
-        scrollView.contentSize = CGSizeMake(view.bounds.width, view.bounds.height - tabBarHeight)
+        scrollView.contentSize = CGSizeMake(view.bounds.width, containerHeight)
         containerView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height)
     }
 
-    func makeContainerView() {
+    func makeContainerView(parent: UIView) {
         containerView.addSubview(image)
         containerView.addSubview(label)
         containerView.addSubview(phoneNumberInput)
         containerView.addSubview(submitButton)
         
         image.snp_makeConstraints{ make in
-            make.top.equalTo(topLayoutGuide).offset(20)
-            make.centerX.equalTo(self.view.centerXAnchor)
+            make.top.equalTo(0).offset(20)
+            make.centerX.equalTo(parent.centerXAnchor)
             make.width.equalTo(200)
             make.height.equalTo(60)
         }
@@ -71,7 +69,7 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
         label.lineBreakMode = .ByWordWrapping
         label.snp_makeConstraints{ make in
             make.top.equalTo(image.snp_bottom).offset(20)
-            make.centerX.equalTo(self.view.centerXAnchor)
+            make.centerX.equalTo(parent.centerXAnchor)
             make.width.equalTo(250)
             make.height.equalTo(60)
         }
@@ -79,7 +77,7 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
         phoneNumberInput.placeholder = "Anna puhelinnumerosi"
         phoneNumberInput.snp_makeConstraints{ make in
             make.top.equalTo(label.snp_bottom)
-            make.centerX.equalTo(self.view.centerXAnchor)
+            make.centerX.equalTo(parent.centerXAnchor)
             make.height.equalTo(40)
         }
         
@@ -88,7 +86,7 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
         submitButton.enabled = false
         submitButton.snp_makeConstraints { make in
             make.top.equalTo(phoneNumberInput.snp_bottom)
-            make.centerX.equalTo(self.view.centerXAnchor)
+            make.centerX.equalTo(parent.centerXAnchor)
             make.width.equalTo(200)
             make.height.equalTo(200)
         }
