@@ -17,7 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if let window = window {
-            let myVC1 = ContactRequestViewController()
+            let tabBarController = UITabBarController()
+            let tabBarHeight = tabBarController.tabBar.frame.size.height
+
+            let myVC1 = ContactRequestViewController(tabBarHeight: tabBarHeight)
             myVC1.tabBarItem = UITabBarItem(title: "Yhteydenotto", image: UIImage(named: "phone"), tag: 1)
 
             let myVC2 = UserDataViewController()
@@ -25,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             let controllers = [myVC1, myVC2]
 
-            let tabBarController = UITabBarController()
+
             tabBarController.viewControllers = controllers
             window.rootViewController = tabBarController
             window.makeKeyAndVisible()

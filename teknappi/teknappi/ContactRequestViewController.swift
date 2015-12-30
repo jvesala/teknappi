@@ -13,6 +13,7 @@ import RxCocoa
 import RxSwift
 
 class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
+    let tabBarHeight: CGFloat
     let scrollView = UIScrollView()
     let containerView = UIView()
 
@@ -22,10 +23,19 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
     let submitButton = UIButton()
     let disposeBag = DisposeBag()
     
+    init(tabBarHeight: CGFloat) {
+        self.tabBarHeight = tabBarHeight
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.scrollView.delegate = self
-        self.scrollView.contentSize = CGSizeMake(view.bounds.width, 500)
+        self.scrollView.contentSize = CGSizeMake(view.bounds.width, view.bounds.height - tabBarHeight)
 
         containerView.backgroundColor = UIColor.greenColor()
         scrollView.backgroundColor = UIColor.blueColor()
@@ -39,7 +49,7 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.frame = view.bounds
-        scrollView.contentSize = CGSizeMake(view.bounds.width, 500)
+        scrollView.contentSize = CGSizeMake(view.bounds.width, view.bounds.height - tabBarHeight)
         containerView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height)
     }
 
