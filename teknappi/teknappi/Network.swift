@@ -42,11 +42,11 @@ class Server {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         return session.rx_JSON(request)
+            .retry(3)
             .map { (data: AnyObject!) -> ServerResult in
                 let postResult: ServerResult? = decode(data)
                 return postResult ?? ServerResult.create("error")
             }
-            .retry(3)
             .catchErrorJustReturn(ServerResult.create("error"))
     }
 }
