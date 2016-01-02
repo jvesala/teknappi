@@ -13,6 +13,10 @@ struct ContactRequestResult {
     var result: String
 }
 
+struct LoginResult {
+    var token: String
+}
+
 extension ContactRequestResult: Decodable {
     static func create(result: String) -> ContactRequestResult {
         return ContactRequestResult(result: result)
@@ -20,6 +24,16 @@ extension ContactRequestResult: Decodable {
     
     static func decode(json: JSON) -> Decoded<ContactRequestResult> {
         return ContactRequestResult.create <^> json <| "result"
+    }
+}
+
+extension LoginResult: Decodable {
+    static func create(token: String) -> LoginResult {
+        return LoginResult(token: token)
+    }
+
+    static func decode(json: JSON) -> Decoded<LoginResult> {
+        return LoginResult.create <^> json <| "token"
     }
 }
 

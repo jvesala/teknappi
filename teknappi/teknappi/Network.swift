@@ -14,7 +14,7 @@ import Argo
 class Server {
     static func sendContactRequest(phoneNumber: String) -> Observable<ContactRequestResult> {
         let url = NSURL(string: "https://teknappimock.herokuapp.com/tek/api/v1/requestContact")
-        let params = ["phoneNumber": phoneNumber] as Dictionary<String, String>
+        let params = ["phoneNumber": phoneNumber]
         let data = try! NSJSONSerialization.dataWithJSONObject(params, options: [])
         return doPost(url!, data: data)
             .map { (data: AnyObject!) -> ContactRequestResult in
@@ -22,6 +22,17 @@ class Server {
                 return postResult ?? ContactRequestResult.create("error")
             }
             .catchErrorJustReturn(ContactRequestResult.create("error"))
+    }
+
+    static func sendLogin(user: String, password: String, personIdEnd: String) -> Observable<LoginResult> {
+        let url = NSURL(string: "https://teknappimock.herokuapp.com/tek/api/v1/login")
+        let params = ["user": user, "password": password, "personIdEnd": personIdEnd]
+        let data = try! NSJSONSerialization.dataWithJSONObject(params, options: [])
+        return doPost(url!, data: data)
+            .map { (data: AnyObject!) -> LoginResult in
+                let postResult: LoginResult? = decode(data)
+                return postResult!
+            }
     }
 
     static func doPost(url: NSURL, data: NSData) -> Observable<AnyObject!> {
