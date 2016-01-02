@@ -32,21 +32,20 @@ class Server {
         let params = ["phoneNumber": phoneNumber] as Dictionary<String, String>
         let data = try! NSJSONSerialization.dataWithJSONObject(params, options: [])
         return doPost(url!, data: data)
+            .map { (data: AnyObject!) -> ServerResult in
+                let postResult: ServerResult? = decode(data)
+                return postResult ?? ServerResult.create("error")
+            }
+            .catchErrorJustReturn(ServerResult.create("error"))
     }
 
-    static func doPost(url: NSURL, data: NSData) -> Observable<ServerResult> {
+    static func doPost(url: NSURL, data: NSData) -> Observable<AnyObject!> {
         let request = NSMutableURLRequest(URL: url, cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10)
         request.HTTPBody = data
         request.HTTPMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-        return session.rx_JSON(request)
-            .retry(3)
-            .map { (data: AnyObject!) -> ServerResult in
-                let postResult: ServerResult? = decode(data)
-                return postResult ?? ServerResult.create("error")
-            }
-            .catchErrorJustReturn(ServerResult.create("error"))
+        return session.rx_JSON(request).retry(3)
     }
 }
