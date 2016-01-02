@@ -18,7 +18,7 @@ class ContactRequestViewController: UIViewController, UIScrollViewDelegate {
     let containerView = UIView()
     let containerHeight = CGFloat(400)
 
-    let image = UIImageView(image: UIImage(named: "teklogo-valkoinen"))
+    let image = UIImageView(image: UIImage(named: "teklogo-transparent"))
     let label = UILabel()
     let phoneNumberInput = UITextField()
     let submitButton = UIButton()
