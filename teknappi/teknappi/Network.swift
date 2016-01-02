@@ -11,32 +11,17 @@ import RxCocoa
 import RxSwift
 import Argo
 
-struct ServerResult {
-    var result: String?
-}
-
-extension ServerResult: Decodable {
-    static func create(result: String?) -> ServerResult {
-        return ServerResult(result: result)
-    }
-
-    static func decode(json: JSON) -> Decoded<ServerResult> {
-        return ServerResult.create
-            <^> json <|? "result"
-    }
-}
-
 class Server {
-    static func sendContactRequest(phoneNumber: String) -> Observable<ServerResult> {
+    static func sendContactRequest(phoneNumber: String) -> Observable<ContactRequestResult> {
         let url = NSURL(string: "https://teknappimock.herokuapp.com/tek/api/v1/requestContact")
         let params = ["phoneNumber": phoneNumber] as Dictionary<String, String>
         let data = try! NSJSONSerialization.dataWithJSONObject(params, options: [])
         return doPost(url!, data: data)
-            .map { (data: AnyObject!) -> ServerResult in
-                let postResult: ServerResult? = decode(data)
-                return postResult ?? ServerResult.create("error")
+            .map { (data: AnyObject!) -> ContactRequestResult in
+                let postResult: ContactRequestResult? = decode(data)
+                return postResult ?? ContactRequestResult.create("error")
             }
-            .catchErrorJustReturn(ServerResult.create("error"))
+            .catchErrorJustReturn(ContactRequestResult.create("error"))
     }
 
     static func doPost(url: NSURL, data: NSData) -> Observable<AnyObject!> {
