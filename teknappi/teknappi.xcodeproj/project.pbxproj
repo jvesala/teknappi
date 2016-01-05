@@ -12,6 +12,7 @@
 		A45FA4011C116D81007C35BB /* ContactRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45FA4001C116D81007C35BB /* ContactRequestViewController.swift */; };
 		A48747321C32935D00B8F371 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48747311C32935D00B8F371 /* UserDataViewController.swift */; };
 		A48747341C37D4E900B8F371 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48747331C37D4E900B8F371 /* Domain.swift */; };
+		A48747361C39A69800B8F371 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48747351C39A69800B8F371 /* LoginView.swift */; };
 		A4AEA4F51BF09FA400899FEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */; };
 		A4AEA4FC1BF09FA400899FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA4FB1BF09FA400899FEF /* Assets.xcassets */; };
 		A4AEA4FF1BF09FA400899FEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AEA4FD1BF09FA400899FEF /* LaunchScreen.storyboard */; };
@@ -42,6 +43,7 @@
 		A45FA4001C116D81007C35BB /* ContactRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRequestViewController.swift; sourceTree = "<group>"; };
 		A48747311C32935D00B8F371 /* UserDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
 		A48747331C37D4E900B8F371 /* Domain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		A48747351C39A69800B8F371 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A4AEA4F11BF09FA400899FEF /* teknappi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teknappi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4AEA4FB1BF09FA400899FEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				A45FA4001C116D81007C35BB /* ContactRequestViewController.swift */,
 				A48747311C32935D00B8F371 /* UserDataViewController.swift */,
 				A48747331C37D4E900B8F371 /* Domain.swift */,
+				A48747351C39A69800B8F371 /* LoginView.swift */,
 			);
 			path = teknappi;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A48747361C39A69800B8F371 /* LoginView.swift in Sources */,
 				A45FA4011C116D81007C35BB /* ContactRequestViewController.swift in Sources */,
 				A48747341C37D4E900B8F371 /* Domain.swift in Sources */,
 				A4AEA4F51BF09FA400899FEF /* AppDelegate.swift in Sources */,

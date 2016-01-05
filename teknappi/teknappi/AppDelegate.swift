@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let myVC1 = ContactRequestViewController(tabBarHeight: tabBarHeight)
             myVC1.tabBarItem = UITabBarItem(title: "Yhteydenotto", image: UIImage(named: "phone"), tag: 1)
 
-            let myVC2 = UserDataViewController()
+            let myVC2 = UserDataViewController(tabBarHeight: tabBarHeight)
             myVC2.tabBarItem = UITabBarItem(title: "Omat tiedot", image: UIImage(named: "man"), tag: 2)
 
             let controllers = [myVC1, myVC2]
