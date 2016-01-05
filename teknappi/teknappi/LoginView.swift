@@ -35,6 +35,22 @@ class LoginView: UIView {
     func makeView() {
         backgroundColor = UIColor.whiteColor()
         self.addSubview(image)
+        self.addSubview(user)
+        user.placeholder = "Käyttäjätunnus"
+        self.addSubview(password)
+        password.placeholder = "Salasana"
+        password.secureTextEntry = true
+        self.addSubview(personIdEnd)
+        personIdEnd.placeholder = "Henkilötunnuksen loppuosa"
+        self.addSubview(submitButton)
+        submitButton.backgroundColor = UIColor.redColor()
+        submitButton.setTitle("Kirjaudu", forState: .Normal)
+        submitButton.rx_tap.subscribeNext { click in
+            let response = Server.sendLogin(self.user.text!, password: self.password.text!, personIdEnd: self.personIdEnd.text!)
+            response.subscribeNext { results in
+                print(results)
+            }
+        }.addDisposableTo(disposeBag)
     }
     
     func makeConstraints() {
@@ -43,6 +59,27 @@ class LoginView: UIView {
             make.centerX.equalTo(parent.centerXAnchor)
             make.width.equalTo(200)
             make.height.equalTo(60)
+        }
+        user.snp_makeConstraints{ make in
+            make.top.equalTo(image.snp_bottom)
+            make.centerX.equalTo(parent.centerXAnchor)
+            make.height.equalTo(40)
+        }
+        password.snp_makeConstraints{ make in
+            make.top.equalTo(user.snp_bottom)
+            make.centerX.equalTo(parent.centerXAnchor)
+            make.height.equalTo(40)
+        }
+        personIdEnd.snp_makeConstraints{ make in
+            make.top.equalTo(password.snp_bottom)
+            make.centerX.equalTo(parent.centerXAnchor)
+            make.height.equalTo(40)
+        }
+        submitButton.snp_makeConstraints{ make in
+            make.top.equalTo(personIdEnd.snp_bottom)
+            make.centerX.equalTo(parent.centerXAnchor)
+            make.height.equalTo(40)
+            make.width.equalTo(250)
         }
     }
 }
