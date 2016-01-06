@@ -35,24 +35,53 @@ class LoginView: UIView {
     func makeView() {
         backgroundColor = UIColor.whiteColor()
         self.addSubview(image)
+
         self.addSubview(user)
         user.placeholder = "Käyttäjätunnus"
+        user.rx_text.subscribeNext { value in
+            self.updateButtonState()
+        }.addDisposableTo(disposeBag)
+
         self.addSubview(password)
         password.placeholder = "Salasana"
         password.secureTextEntry = true
+        password.rx_text.subscribeNext { value in
+            self.updateButtonState()
+        }.addDisposableTo(disposeBag)
+
         self.addSubview(personIdEnd)
         personIdEnd.placeholder = "Henkilötunnuksen loppuosa"
+        personIdEnd.rx_text.subscribeNext { value in
+            self.updateButtonState()
+        }.addDisposableTo(disposeBag)
+
         self.addSubview(submitButton)
-        submitButton.backgroundColor = UIColor.redColor()
         submitButton.setTitle("Kirjaudu", forState: .Normal)
+        submitButton.enabled = false
         submitButton.rx_tap.subscribeNext { click in
             let response = Server.sendLogin(self.user.text!, password: self.password.text!, personIdEnd: self.personIdEnd.text!)
             response.subscribeNext { results in
                 print(results)
             }
         }.addDisposableTo(disposeBag)
+        updateButtonState()
     }
-    
+
+    func updateButtonState() {
+        self.submitButton.enabled = self.buttonState()
+        if (self.submitButton.enabled) {
+            self.submitButton.backgroundColor = UIColor.redColor()
+        } else {
+            self.submitButton.backgroundColor = UIColor.grayColor()
+        }
+    }
+
+    func buttonState() -> Bool {
+        return ((self.user.text != nil && self.user.text!.characters.count > 0) &&
+            (self.password.text != nil && self.password.text!.characters.count > 0) &&
+            (self.personIdEnd.text != nil && self.personIdEnd.text!.characters.count > 0))
+    }
+
     func makeConstraints() {
         image.snp_makeConstraints{ make in
             make.top.equalTo(0).offset(20)
