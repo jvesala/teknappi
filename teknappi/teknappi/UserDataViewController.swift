@@ -18,6 +18,9 @@ class UserDataViewController: CommonViewController {
     
     init(tabBarHeight: CGFloat) {
         let scrollView = UIScrollView()
+        
+        print(UserDataRepository.getLoginToken())
+        
         containerView2 = LoginView(parent: scrollView)
         super.init(tabBarHeight: tabBarHeight, scrollView: scrollView, containerView: containerView2, containerHeight: containerHeight2)
     }

@@ -62,6 +62,7 @@ class LoginView: UIView {
             let response = Server.sendLogin(self.user.text!, password: self.password.text!, personIdEnd: self.personIdEnd.text!)
             response.subscribeNext { results in
                 print(results)
+                UserDataRepository.setLoginToken(results.token)
             }
         }.addDisposableTo(disposeBag)
         updateButtonState()
