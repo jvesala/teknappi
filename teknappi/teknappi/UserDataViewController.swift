@@ -18,14 +18,16 @@ class UserDataViewController: CommonViewController {
     
     init(tabBarHeight: CGFloat) {
         let scrollView = UIScrollView()
-        
-        print(UserDataRepository.getLoginToken())
-        
         containerView2 = LoginView(parent: scrollView)
         super.init(tabBarHeight: tabBarHeight, scrollView: scrollView, containerView: containerView2, containerHeight: containerHeight2)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print(UserDataRepository.getLoginToken())
     }
 }

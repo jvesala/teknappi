@@ -46,4 +46,8 @@ class CommonViewController: UIViewController, UIScrollViewDelegate {
         scrollView.contentSize = CGSizeMake(view.bounds.width, containerHeight)
         containerView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height)
     }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 }
