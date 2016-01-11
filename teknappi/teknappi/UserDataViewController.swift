@@ -12,36 +12,17 @@ import SnapKit
 import RxCocoa
 import RxSwift
 
-class UserDataViewController: UIViewController, UIScrollViewDelegate {
-    let tabBarHeight: CGFloat
-    let scrollView = UIScrollView()
-    let containerView: UIView
-    let containerHeight = CGFloat(400)    
+class UserDataViewController: CommonViewController {
+    let containerView2: UIView
+    let containerHeight2 = CGFloat(400)
     
     init(tabBarHeight: CGFloat) {
-        self.containerView = LoginView(parent: scrollView)
-        self.tabBarHeight = tabBarHeight
-        super.init(nibName: nil, bundle: nil)
+        let scrollView = UIScrollView()
+        containerView2 = LoginView(parent: scrollView)
+        super.init(tabBarHeight: tabBarHeight, scrollView: scrollView, containerView: containerView2, containerHeight: containerHeight2)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.scrollView.delegate = self
-        self.scrollView.contentSize = CGSizeMake(view.bounds.width, containerHeight)
-        
-        view.backgroundColor = UIColor.whiteColor()
-        view.addSubview(scrollView)
-        scrollView.addSubview(containerView)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        scrollView.frame = CGRectMake(0, 0, view.bounds.width, view.bounds.height - tabBarHeight)
-        scrollView.contentSize = CGSizeMake(view.bounds.width, containerHeight)
-        containerView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height)
     }
 }

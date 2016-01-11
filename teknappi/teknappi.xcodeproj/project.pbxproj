@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7FA525F699E36BE7AEB0E087 /* Pods_teknappi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F87E9B6A22D6BEB5668590C /* Pods_teknappi.framework */; };
 		A41F67CC1C4108A300D2EEB8 /* ContactRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41F67CB1C4108A300D2EEB8 /* ContactRequestView.swift */; };
+		A41F67CE1C410AC400D2EEB8 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41F67CD1C410AC400D2EEB8 /* CommonViewController.swift */; };
 		A45FA3FF1C0B044F007C35BB /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45FA3FE1C0B044F007C35BB /* Network.swift */; };
 		A45FA4011C116D81007C35BB /* ContactRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45FA4001C116D81007C35BB /* ContactRequestViewController.swift */; };
 		A48747321C32935D00B8F371 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48747311C32935D00B8F371 /* UserDataViewController.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		2F87E9B6A22D6BEB5668590C /* Pods_teknappi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teknappi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41F67CB1C4108A300D2EEB8 /* ContactRequestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRequestView.swift; sourceTree = "<group>"; };
+		A41F67CD1C410AC400D2EEB8 /* CommonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		A45FA3FE1C0B044F007C35BB /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		A45FA4001C116D81007C35BB /* ContactRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRequestViewController.swift; sourceTree = "<group>"; };
 		A48747311C32935D00B8F371 /* UserDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				A48747331C37D4E900B8F371 /* Domain.swift */,
 				A48747351C39A69800B8F371 /* LoginView.swift */,
 				A41F67CB1C4108A300D2EEB8 /* ContactRequestView.swift */,
+				A41F67CD1C410AC400D2EEB8 /* CommonViewController.swift */,
 			);
 			path = teknappi;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				A48747341C37D4E900B8F371 /* Domain.swift in Sources */,
 				A4AEA4F51BF09FA400899FEF /* AppDelegate.swift in Sources */,
 				A45FA3FF1C0B044F007C35BB /* Network.swift in Sources */,
+				A41F67CE1C410AC400D2EEB8 /* CommonViewController.swift in Sources */,
 				A48747321C32935D00B8F371 /* UserDataViewController.swift in Sources */,
 				A41F67CC1C4108A300D2EEB8 /* ContactRequestView.swift in Sources */,
 			);
