@@ -110,6 +110,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A43EEA4D1C538B75004592AC /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A45FA4001C116D81007C35BB /* ContactRequestViewController.swift */,
+				A48747311C32935D00B8F371 /* UserDataViewController.swift */,
+				A41F67CD1C410AC400D2EEB8 /* CommonViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		A43EEA4E1C538B97004592AC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A48747351C39A69800B8F371 /* LoginView.swift */,
+				A41F67CB1C4108A300D2EEB8 /* ContactRequestView.swift */,
+				A43EEA4A1C537FE0004592AC /* UserDataView.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		A4AEA4E81BF09FA400899FEF = {
 			isa = PBXGroup;
 			children = (
@@ -135,19 +155,15 @@
 		A4AEA4F31BF09FA400899FEF /* teknappi */ = {
 			isa = PBXGroup;
 			children = (
-				A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */,
-				A4AEA4FB1BF09FA400899FEF /* Assets.xcassets */,
-				A4AEA4FD1BF09FA400899FEF /* LaunchScreen.storyboard */,
 				A4AEA5001BF09FA400899FEF /* Info.plist */,
-				A45FA3FE1C0B044F007C35BB /* Network.swift */,
-				A45FA4001C116D81007C35BB /* ContactRequestViewController.swift */,
-				A48747311C32935D00B8F371 /* UserDataViewController.swift */,
+				A4AEA4F41BF09FA400899FEF /* AppDelegate.swift */,
 				A48747331C37D4E900B8F371 /* Domain.swift */,
-				A48747351C39A69800B8F371 /* LoginView.swift */,
-				A41F67CB1C4108A300D2EEB8 /* ContactRequestView.swift */,
-				A41F67CD1C410AC400D2EEB8 /* CommonViewController.swift */,
+				A45FA3FE1C0B044F007C35BB /* Network.swift */,
 				A41F67CF1C44141900D2EEB8 /* UserDataRepository.swift */,
-				A43EEA4A1C537FE0004592AC /* UserDataView.swift */,
+				A4AEA4FB1BF09FA400899FEF /* Assets.xcassets */,
+				A43EEA4D1C538B75004592AC /* controller */,
+				A4AEA4FD1BF09FA400899FEF /* LaunchScreen.storyboard */,
+				A43EEA4E1C538B97004592AC /* view */,
 			);
 			path = teknappi;
 			sourceTree = "<group>";
