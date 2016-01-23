@@ -13,14 +13,13 @@ import RxCocoa
 import RxSwift
 
 class UserDataViewController: CommonViewController {
-    let containerView2: UIView
-    let containerHeight2 = CGFloat(400)
-    
+
     init(tabBarHeight: CGFloat) {
-        let scrollView = UIScrollView()
-        //containerView2 = LoginView(parent: scrollView)
-        containerView2 = UserDataView(parent: scrollView)
-        super.init(tabBarHeight: tabBarHeight, scrollView: scrollView, containerView: containerView2, containerHeight: containerHeight2)
+        super.init()
+        self.tabBarHeight = tabBarHeight
+        containerHeight = CGFloat(400)
+        //containerView = LoginView(parent: scrollView)
+        containerView = UserDataView(parent: scrollView)
     }
     
     required init?(coder aDecoder: NSCoder) {

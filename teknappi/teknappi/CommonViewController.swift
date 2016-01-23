@@ -13,16 +13,16 @@ import RxCocoa
 import RxSwift
 
 class CommonViewController: UIViewController, UIScrollViewDelegate {
-    let scrollView: UIScrollView
-    let tabBarHeight: CGFloat
-    let containerView: UIView
-    let containerHeight: CGFloat
+    var scrollView: UIScrollView
+    var tabBarHeight: CGFloat
+    var containerView: UIView
+    var containerHeight: CGFloat
 
-    init(tabBarHeight: CGFloat, scrollView: UIScrollView, containerView: UIView, containerHeight: CGFloat) {
-        self.tabBarHeight = tabBarHeight
-        self.scrollView = scrollView
-        self.containerView = containerView
-        self.containerHeight = containerHeight
+    init() {
+        self.scrollView = UIScrollView()
+        self.tabBarHeight = 0
+        self.containerView = UIView()
+        self.containerHeight = 0
         super.init(nibName: nil, bundle: nil)
     }
     
