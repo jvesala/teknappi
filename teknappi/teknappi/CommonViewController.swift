@@ -23,6 +23,7 @@ class CommonViewController: UIViewController, UIScrollViewDelegate {
         self.containerView = UIView()
         self.containerHeight = 0
         super.init(nibName: nil, bundle: nil)
+        self.scrollView.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,9 +32,7 @@ class CommonViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.scrollView.delegate = self
         self.scrollView.contentSize = CGSizeMake(view.bounds.width, containerHeight)
-        
         view.backgroundColor = UIColor.whiteColor()
         view.addSubview(scrollView)
         scrollView.addSubview(containerView)
