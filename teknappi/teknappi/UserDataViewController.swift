@@ -18,7 +18,8 @@ class UserDataViewController: CommonViewController {
     
     init(tabBarHeight: CGFloat) {
         let scrollView = UIScrollView()
-        containerView2 = LoginView(parent: scrollView)
+        //containerView2 = LoginView(parent: scrollView)
+        containerView2 = UserDataView(parent: scrollView)
         super.init(tabBarHeight: tabBarHeight, scrollView: scrollView, containerView: containerView2, containerHeight: containerHeight2)
     }
     
