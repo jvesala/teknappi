@@ -19,4 +19,10 @@ class UserDataRepository {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(loginToken, forKey: "loginToken")
     }
+    
+    static func reset() {
+        print("Remove existing tokens for debug")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.removeObjectForKey("loginToken")
+    }
 }
