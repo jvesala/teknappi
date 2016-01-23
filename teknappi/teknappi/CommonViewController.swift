@@ -32,6 +32,10 @@ class CommonViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        doLoad()
+    }
+    
+    func doLoad() {
         self.scrollView.contentSize = CGSizeMake(view.bounds.width, containerHeight)
         view.backgroundColor = UIColor.whiteColor()
         view.addSubview(scrollView)
