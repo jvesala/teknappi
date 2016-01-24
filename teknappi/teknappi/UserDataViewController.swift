@@ -26,12 +26,12 @@ class UserDataViewController: CommonViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
-        updateView()
+        selectContainerView()
         super.doLoad()
         super.viewWillAppear(animated)
     }
     
-    func updateView() {
+    func selectContainerView() {
         if ((UserDataRepository.getLoginToken()) != nil) {
             containerView = UserDataView(parent: scrollView)
         } else {
@@ -47,5 +47,10 @@ class UserDataViewController: CommonViewController {
             self.scrollView.contentSize = CGSizeMake(self.view.bounds.width, self.containerHeight)
             self.scrollView.addSubview(self.containerView)
         })
+    }
+    
+    func updateView() {
+        selectContainerView()
+        replaceView()
     }
 }

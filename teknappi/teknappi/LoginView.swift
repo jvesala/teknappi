@@ -66,7 +66,6 @@ class LoginView: UIView {
                 print(results)
                 UserDataRepository.setLoginToken(results.token)
                 self.controller.updateView()
-                self.controller.replaceView()
             }
         }.addDisposableTo(disposeBag)
         updateButtonState()
