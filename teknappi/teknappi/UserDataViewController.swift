@@ -18,7 +18,7 @@ class UserDataViewController: CommonViewController {
         super.init()
         self.tabBarHeight = tabBarHeight
         containerHeight = CGFloat(400)
-        containerView = LoginView(parent: scrollView)
+        containerView = LoginView(controller: self)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,12 +26,26 @@ class UserDataViewController: CommonViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
+        updateView()
+        super.doLoad()
+        super.viewWillAppear(animated)
+    }
+    
+    func updateView() {
         if ((UserDataRepository.getLoginToken()) != nil) {
             containerView = UserDataView(parent: scrollView)
         } else {
-            containerView = LoginView(parent: scrollView)
+            containerView = LoginView(controller: self)
         }
-        super.doLoad()
-        super.viewWillAppear(animated)
+    }
+    
+    func replaceView() {
+        dispatch_async(dispatch_get_main_queue(), {
+            for v in self.scrollView.subviews {
+                v.removeFromSuperview()
+            }
+            self.scrollView.contentSize = CGSizeMake(self.view.bounds.width, self.containerHeight)
+            self.scrollView.addSubview(self.containerView)
+        })
     }
 }

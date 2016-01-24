@@ -13,6 +13,7 @@ import RxCocoa
 import RxSwift
 
 class LoginView: UIView {
+    let controller: UserDataViewController
     let parent: UIView
     let image = UIImageView(image: UIImage(named: "teklogo-transparent"))
     let user = UITextField()
@@ -21,8 +22,9 @@ class LoginView: UIView {
     let submitButton = UIButton()
     let disposeBag = DisposeBag()
     
-    init(parent: UIView) {
-        self.parent = parent
+    init(controller: UserDataViewController) {
+        self.controller = controller
+        self.parent = controller.scrollView
         super.init(frame: parent.frame)
         makeView()
         makeConstraints()
@@ -63,6 +65,8 @@ class LoginView: UIView {
             response.subscribeNext { results in
                 print(results)
                 UserDataRepository.setLoginToken(results.token)
+                self.controller.updateView()
+                self.controller.replaceView()
             }
         }.addDisposableTo(disposeBag)
         updateButtonState()
