@@ -35,6 +35,16 @@ class Server {
             }
     }
 
+    static func sendGetUserdata(token: String) -> Observable<UserData> {
+        let url = NSURL(string: "https://teknappimock.herokuapp.com/tek/api/v1/userdata/" + token)
+        let data = try! NSJSONSerialization.dataWithJSONObject([], options: [])
+        return doPost(url!, data: data)
+            .map { (data: AnyObject!) -> UserData in
+                let postResult: UserData? = decode(data)
+                return postResult!
+        }
+    }
+
     static func doPost(url: NSURL, data: NSData) -> Observable<AnyObject!> {
         let request = NSMutableURLRequest(URL: url, cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10)
         request.HTTPBody = data

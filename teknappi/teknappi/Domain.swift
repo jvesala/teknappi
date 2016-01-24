@@ -17,6 +17,13 @@ struct LoginResult {
     var token: String
 }
 
+struct UserData {
+    var firstName: String
+    var lastName: String
+    var email: String
+    var phoneNumber: String
+}
+
 extension ContactRequestResult: Decodable {
     static func create(result: String) -> ContactRequestResult {
         return ContactRequestResult(result: result)
@@ -34,6 +41,20 @@ extension LoginResult: Decodable {
 
     static func decode(json: JSON) -> Decoded<LoginResult> {
         return LoginResult.create <^> json <| "token"
+    }
+}
+
+extension UserData: Decodable {
+    static func create(firstName: String)(lastName: String)(email: String)(phoneNumber: String) -> UserData {
+        return UserData(firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber)
+    }
+    
+    static func decode(json: JSON) -> Decoded<UserData> {
+        return UserData.create
+            <^> json <| "firstName"
+            <*> json <| "lastName"
+            <*> json <| "email"
+            <*> json <| "phoneNumber"
     }
 }
 

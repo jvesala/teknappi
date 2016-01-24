@@ -61,11 +61,15 @@ class LoginView: UIView {
         submitButton.setTitle("Kirjaudu", forState: .Normal)
         submitButton.enabled = false
         submitButton.rx_tap.subscribeNext { click in
-            let response = Server.sendLogin(self.user.text!, password: self.password.text!, personIdEnd: self.personIdEnd.text!)
-            response.subscribeNext { results in
-                print(results)
+            self.submitButton.enabled = false
+            let loginResponse = Server.sendLogin(self.user.text!, password: self.password.text!, personIdEnd: self.personIdEnd.text!)
+            loginResponse.subscribeNext { results in
                 UserDataRepository.setLoginToken(results.token)
                 self.controller.updateView()
+                let userDataResponse = Server.sendGetUserdata(results.token)
+                userDataResponse.subscribeNext { results in
+                    print(results)
+                }
             }
         }.addDisposableTo(disposeBag)
         updateButtonState()
