@@ -65,10 +65,10 @@ class LoginView: UIView {
             let loginResponse = Server.sendLogin(self.user.text!, password: self.password.text!, personIdEnd: self.personIdEnd.text!)
             loginResponse.subscribeNext { results in
                 UserDataRepository.setLoginToken(results.token)
-                self.controller.updateView()
                 let userDataResponse = Server.sendGetUserdata(results.token)
                 userDataResponse.subscribeNext { results in
-                    print(results)
+                    UserDataRepository.setUserData(results)
+                    self.controller.updateView()
                 }
             }
         }.addDisposableTo(disposeBag)

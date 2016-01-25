@@ -35,17 +35,21 @@ class UserDataView: UIView {
     }
     
     func makeView() {
+        let userData = UserDataRepository.getUserData()
+        
         backgroundColor = UIColor.whiteColor()
         self.addSubview(image)
         
         self.addSubview(phoneNumberLabel)
         phoneNumberLabel.text = "Puhelinnumerosi"
+        phoneNumber.text = userData?.phoneNumber ?? ""
         
         self.addSubview(phoneNumber)
 
         
         self.addSubview(emailLabel)
         emailLabel.text = "Sähköpostiosoitteesi"
+        email.text = userData?.email ?? ""
         
         self.addSubview(email)
         
